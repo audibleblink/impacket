@@ -34,6 +34,7 @@ class NTLMRelayxConfig:
         self.randomtargets = False
         self.encoding = None
         self.ipv6 = False
+        self.remove_mic = False
 
         #WPAD options
         self.serve_wpad = False
@@ -79,7 +80,7 @@ class NTLMRelayxConfig:
 
     def setInterfaceIp(self, ip):
         self.interfaceIp = ip
-    
+
     def setListeningPort(self, port):
         self.listeningPort = port
 
@@ -154,3 +155,6 @@ class NTLMRelayxConfig:
             self.serve_wpad = True
         self.wpad_host = wpad_host
         self.wpad_auth_num = wpad_auth_num
+
+    def setExploitOptions(self, remove_mic):
+        self.remove_mic = remove_mic
