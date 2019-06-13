@@ -34,6 +34,7 @@ class NTLMRelayxConfig:
         self.randomtargets = False
         self.encoding = None
         self.ipv6 = False
+        self.remove_mic = False
 
         # WPAD options
         self.serve_wpad = False
@@ -161,3 +162,6 @@ class NTLMRelayxConfig:
 
     def setTargetRemoval(self, remove_target):
         self.remove_target = remove_target
+
+    def setExploitOptions(self, remove_mic):
+        self.remove_mic = remove_mic
